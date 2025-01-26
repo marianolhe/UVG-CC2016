@@ -82,7 +82,7 @@ public class LicuadoraI implements Licuadora{
     }
 
     public double llenar(double volumen){
-        print("¿Qué volumen desea agregar a la licuadora?")
+        System.out.println("¿Qué volumen desea agregar a la licuadora?")
         volumen = scanner.nextDouble();
         return volumen;
     }
@@ -106,8 +106,8 @@ public class LicuadoraI implements Licuadora{
         }
     }
 
-    public int consultarVelocidad(){
-        return velocidad;
+    public int consultarVelocidad(double velocidad){
+        System.out.println("La velocidad actual de la licuadora es"+velocidad);
     }
 
     public boolean estaLlena(){
