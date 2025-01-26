@@ -1,4 +1,6 @@
 package uvg;
+import java.util.Scanner;
+
 /**
  * Clase que implementa la interfaz Licuadora y desarrolla los métodos
  * @author Marian Olivares, Marcela Ordoñez
@@ -69,7 +71,6 @@ public class LicuadoraI implements Licuadora{
             System.out.println("La licuadora esta encendida");
         }else {
             System.out.println("La licuadora esta apagada");
-        }
     }
 
     public void apagar(){
@@ -81,15 +82,28 @@ public class LicuadoraI implements Licuadora{
     }
 
     public double llenar(double volumen){
+        print("¿Qué volumen desea agregar a la licuadora?")
+        volumen = scanner.nextDouble();
         return volumen;
     }
 
     public int incrementarVelocidad(){
-        return velocidad;
-    }
+        byte vmax = 10;
+        if (velocidad < vmax){
+            velocidad++;
+            System.out.println("La velocidad ha sido incrementada a"+velocidad+1);}   else{
+                
+            System.out.println("La velocidad no puede ser incrementada");
+        }   }
 
     public int decrementarVelocidad(){
-        return velocidad;
+        byte vmin = 0;
+        if (velocidad > vmin){
+            velocidad--;
+            System.out.println("La velocidad ha sido decrementada a"+velocidad-1);}   else{
+                
+            System.out.println("La velocidad no puede ser decrementada");
+        }
     }
 
     public int consultarVelocidad(){
@@ -109,4 +123,5 @@ public class LicuadoraI implements Licuadora{
     }
 
 
+}
 }
