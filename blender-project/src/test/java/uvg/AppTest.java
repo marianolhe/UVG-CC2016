@@ -1,4 +1,4 @@
-package uvg.edu.com;
+package uvg;
 
 import static org.junit.Assert.assertTrue;
 

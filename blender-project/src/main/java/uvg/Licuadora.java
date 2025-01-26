@@ -1,11 +1,10 @@
-package uvg.edu.com;
 /**
  * Interfaz realizada para comprobar funcionamiento con otros grupos
  * @author toda la clase
  * @version 1.0
  */
 
-public interface Licuadora {
+ public interface Licuadora {
     public interface Licuadora {
         void encender();
         void apagar();
