@@ -65,29 +65,54 @@ public class LicuadoraI implements Licuadora{
      * Métodos de la Intefaz Licuadora
      */
 
+
+
+    /**
+     * Método que enciende la licuadora
+     */
+
     public void encender(){
         estado = true;
-        if (estado){
-            System.out.println("La licuadora esta encendida");
-        }else {
-            System.out.println("La licuadora esta apagada");
-        }
-    }
+        System.out.println("La licuadora esta encendida");
+    }//cierre del metodo
+
+    /**
+     * Método que apaga la licuadora
+     */
 
     public void apagar(){
         estado = false;
         System.out.println("La licuadora está apagada");
-    }
+    }//cierre del metodo
+
+    /**
+     * Método que verifica si la licuadora esta encendida
+     * @return estado de la licuadora (apagada o encendida)
+     */
 
     public boolean estaEncendida(){
         return estado;
-    }
+        if (estado = true){
+            System.out.println("La licuadora esta encendida");
+        } else{
+            System.out.println("La licuadora esta apagada");
+        }
+    }//cierre del metodo
+
+    /**
+     * Método que llena la licuadora
+     * @return volumen que fue añadido a la licuadora
+     */
 
     public double llenar(double volumen){
         System.out.println("¿Qué volumen desea agregar a la licuadora?")
-        volumen = scanner.nextDouble();
+        volumen = volumen + scanner.nextDouble();
         return volumen;
-    }
+    } //cierre del metodo
+
+    /**
+     * Método que incrementa la velocidad de la licuadora
+     */
 
     public int incrementarVelocidad(){
         byte vmax = 10;
@@ -97,7 +122,11 @@ public class LicuadoraI implements Licuadora{
                 
             System.out.println("La velocidad no puede ser incrementada");
         } 
-    }
+    }//cierre del metodo
+
+    /**
+     * Método que decrementa la velocidad de la licuadora
+     */
 
     public int decrementarVelocidad(){
         byte vmin = 0;
@@ -107,7 +136,12 @@ public class LicuadoraI implements Licuadora{
                 
             System.out.println("La velocidad no puede ser decrementada");
         }
-    }
+    }//cierre del metodo
+
+    /**
+     * Método que consulta la velocidad de la licuadora
+     * @return velocidad de la licuadora
+     */
 
     public int consultarVelocidad(double velocidad){
         if (!estado){
@@ -117,7 +151,12 @@ public class LicuadoraI implements Licuadora{
             System.out.println("La velocidad de la licuadora es: "+velocidad);
             return velocidad;
         }
-    }
+    }//cierre del metodo
+
+    /**
+     * Método que verifica si la licuadora esta llena
+     * @return true si la licuadora esta llena, false si no lo esta
+     */
 
     public boolean estaLlena(){
         if (volumen > 0){
@@ -127,7 +166,12 @@ public class LicuadoraI implements Licuadora{
             System.out.println("La licuadora no esta llena");
             return false;
         }
-    }
+    }//cierre del metodo
+
+    /**
+     * Método que vacia la licuadora
+     * @return volumen de la licuadora, el cual debería ser 0
+     */
 
     public double vaciar(){
         if (volumen > 0){
@@ -141,6 +185,13 @@ public class LicuadoraI implements Licuadora{
 
     }
 
+    /**
+     * Método que sirve el licuado
+     * @param volumenRestado indica el volumen que se desea servir
+     * @return volumen restante de la licuadora
+     * @return volumen servido de la licuadora
+     */
+
     public double servir(double volumenRestado){
         if (volumen >= volumenRestado){
             System.out.println("Se ha servido "+volumenRestado+" de licuado");
@@ -152,5 +203,5 @@ public class LicuadoraI implements Licuadora{
             volumen = 0;
             return servido;
         }
-    }
-}
+    }//cierre del metodo
+}//cierre de la clase
