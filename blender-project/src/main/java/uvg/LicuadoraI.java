@@ -76,11 +76,7 @@ public class LicuadoraI implements Licuadora{
 
     public void apagar(){
         estado = false;
-        if (!estado) {
-            System.out.println("La licuadora esta apagada");
-        }else {
-            System.out.println("La licuadora esta encendida");
-        }
+        System.out.println("La licuadora está apagada");
     }
 
     public boolean estaEncendida(){
