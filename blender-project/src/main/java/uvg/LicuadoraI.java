@@ -16,7 +16,7 @@ public class LicuadoraI implements Licuadora{
         private byte velocidad;
         private byte volumen;
         private byte volumenRestado;
-        private String estado;
+        private boolean estado;
 
     /**
      * Constructores de los objetos
@@ -26,7 +26,7 @@ public class LicuadoraI implements Licuadora{
         this.velocidad = 0;
         this.volumen = 0;
         this.volumenRestado = 0;
-        this.estado = "apagada";
+        this.estado = "false";
     }
 
     public byte get velocidad(){
@@ -50,10 +50,10 @@ public class LicuadoraI implements Licuadora{
         this.volumenRestado = volumenRestado;
     }
 
-    public String get estado(){
+    public boolean get estado(){
         return estado;
     }
-    public void set estado(String estado){
+    public void set estado(boolean estado){
         this.estado = estado;
     }
 
@@ -64,7 +64,7 @@ public class LicuadoraI implements Licuadora{
      */
 
     public void encender(){
-        System.out.println("La licuadora esta encendida");
+        estado = 
     }
 
     public void apagar(){
