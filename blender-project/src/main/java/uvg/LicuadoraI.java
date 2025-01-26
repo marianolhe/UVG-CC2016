@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class LicuadoraI implements Licuadora{
     /** Objetos necesarios
-        * @param velocidad indica la velocidad de la licuadora
+        */@param velocidad indica la velocidad de la licuadora
         */@param volumen indica el volumen de la licuadora
         */@param volumenRestado indica el volumen restado de la licuadora
         */@param estado indica el estado de la licuadora ya sea apagada o encendida
@@ -67,18 +67,24 @@ public class LicuadoraI implements Licuadora{
 
     public void encender(){
         estado = true;
-        if estado == true{
+        if (estado){
             System.out.println("La licuadora esta encendida");
         }else {
             System.out.println("La licuadora esta apagada");
+        }
     }
 
     public void apagar(){
-        System.out.println("La licuadora esta apagada");
+        estado = false;
+        if (!estado) {
+            System.out.println("La licuadora esta apagada");
+        }else {
+            System.out.println("La licuadora esta encendida");
+        }
     }
 
     public boolean estaEncendida(){
-        return true;
+        return estado;
     }
 
     public double llenar(double volumen){
@@ -94,7 +100,8 @@ public class LicuadoraI implements Licuadora{
             System.out.println("La velocidad ha sido incrementada a"+velocidad+1);}   else{
                 
             System.out.println("La velocidad no puede ser incrementada");
-        }   }
+        } 
+    }
 
     public int decrementarVelocidad(){
         byte vmin = 0;
@@ -107,21 +114,47 @@ public class LicuadoraI implements Licuadora{
     }
 
     public int consultarVelocidad(double velocidad){
-        System.out.println("La velocidad actual de la licuadora es"+velocidad);
+        if (!estado){
+            System.out.println("La licuadora esta apagada. Velocidad: 0");
+            return 0;
+        }else{
+            System.out.println("La velocidad de la licuadora es: "+velocidad);
+            return velocidad;
+        }
     }
 
     public boolean estaLlena(){
-        return true;
+        if (volumen > 0){
+            System.out.println("La licuadora esta llena");
+            return true;
+        }else{
+            System.out.println("La licuadora no esta llena");
+            return false;
+        }
     }
 
     public double vaciar(){
-        return 0;
+        if (volumen > 0){
+            System.out.println("La licuadora ya se encuentra vacía");
+            return 0;
+        } else{
+            volumen = 0;
+            System.out.println("La licuadora se ha vaciado");
+            return volumen;
+        }
+
     }
 
     public double servir(double volumenRestado){
-        return volumenRestado;
+        if (volumen >= volumenRestado){
+            System.out.println("Se ha servido "+volumenRestado+" de licuado");
+            volumen -= volumenRestado;
+            return volumenRestado;
+        } else{
+            System.out.println("No se puede servir "+volumenRestado+" de licuado. Hay "+volumen+" de líquido");
+            double servido = volumen; 
+            volumen = 0;
+            return servido;
+        }
     }
-
-
-}
 }
