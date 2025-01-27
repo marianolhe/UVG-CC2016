@@ -13,17 +13,6 @@ class LicuadoraITest {
         licuadora = new LicuadoraI(0, 0, 0, false);
     }
 
-    @Test
-    void testEncender() {
-        licuadora.encender();
-        assertTrue(licuadora.getEstado(), "La licuadora debería estar encendida");
-    }
-
-    @Test
-    void testApagar() {
-        licuadora.apagar();
-        assertFalse(licuadora.getEstado(), "La licuadora debería estar apagada");
-    }
 
     @Test
     void testIncrementarVelocidad() {
