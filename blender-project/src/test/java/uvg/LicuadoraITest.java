@@ -10,7 +10,7 @@ class LicuadoraITest {
 
     @BeforeEach
     void setUp() {
-        licuadora = new LicuadoraI((byte) 0, (byte) 0, (byte) 0, "false");
+        licuadora = new LicuadoraI(0, 0, 0, false);
     }
 
     @Test
@@ -74,7 +74,4 @@ class LicuadoraITest {
         licuadora.setVolumen((byte) 5);
         assertTrue(licuadora.estaLlena(), "La licuadora debería estar llena");
     }
-}
-
-
 }
