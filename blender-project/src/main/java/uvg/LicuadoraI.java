@@ -17,9 +17,9 @@ public class LicuadoraI implements Licuadora {
      * @param estado indica el estado de la licuadora ya sea apagada o encendida
      */
 
-        private byte velocidad;
-        private byte volumen;
-        private byte volumenRestado;
+        private int velocidad;
+        private int volumen;
+        private int volumenRestado;
         private boolean estado;
         Scanner scanner = new Scanner(System.in);
 
@@ -27,31 +27,31 @@ public class LicuadoraI implements Licuadora {
      * Constructores de los objetos
      */
 
-    public LicuadoraI(byte velocidad, byte volumen, byte volumenRestado, boolean estado){
+    public LicuadoraI(int velocidad, int volumen, int volumenRestado, boolean estado){
         this.velocidad = 0;
         this.volumen = 0;
         this.volumenRestado = 0;
         this.estado = false;
     }
 
-    public byte getVelocidad(){
+    public int getVelocidad(){
         return velocidad;
     }
-    public void setVelocidad(byte velocidad){
+    public void setVelocidad(int velocidad){
         this.velocidad = velocidad;
     }
 
-    public byte getVolumen(){
+    public int getVolumen(){
         return volumen;
     }
-    public void setVolumen(byte volumen){
+    public void setVolumen(int volumen){
         this.volumen = volumen;
     }
 
-    public byte getVolumenRestado(){
+    public int getVolumenRestado(){
         return volumenRestado;
     }
-    public void setVolumenRestado(byte volumenRestado){
+    public void setVolumenRestado(int volumenRestado){
         this.volumenRestado = volumenRestado;
     }
 
@@ -118,7 +118,7 @@ public class LicuadoraI implements Licuadora {
      */
 
     public int incrementarVelocidad(){
-        byte vmax = 10;
+        int vmax = 10;
         if (velocidad < vmax){
             velocidad++;
             System.out.println("La velocidad ha sido incrementada a " + velocidad);
@@ -134,7 +134,7 @@ public class LicuadoraI implements Licuadora {
      */
 
     public int decrementarVelocidad(){
-        byte vmin = 0;
+        int vmin = 0;
         if (velocidad > vmin){
             velocidad--;
             System.out.println("La velocidad ha sido decrementada a " + velocidad);
@@ -149,7 +149,7 @@ public class LicuadoraI implements Licuadora {
      * @return velocidad de la licuadora
      */
 
-    public double consultarVelocidad(double velocidad){
+    public int consultarVelocidad(int velocidad){
         if (!estado){
             System.out.println("La licuadora esta apagada. Velocidad: 0");
             return 0;

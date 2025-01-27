@@ -12,9 +12,11 @@ package uvg;
         double llenar(double volumen);
         int incrementarVelocidad();
         int decrementarVelocidad();
-        int consultarVelocidad();
+        int consultarVelocidad(int velocidad);
         boolean estaLlena();
         double vaciar();
         double servir(double volumenRestado);
 }
+
+        
             
