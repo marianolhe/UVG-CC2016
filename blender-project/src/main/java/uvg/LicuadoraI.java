@@ -4,58 +4,61 @@ import java.util.Scanner;
 /**
  * Clase que implementa la interfaz Licuadora y desarrolla los métodos
  * @author Marian Olivares, Marcela Ordoñez
- * @version 1.0
+ * @version 2.0
  */
 
-public class LicuadoraI implements Licuadora{
-    /** Objetos necesarios
-        */@param velocidad indica la velocidad de la licuadora
-        */@param volumen indica el volumen de la licuadora
-        */@param volumenRestado indica el volumen restado de la licuadora
-        */@param estado indica el estado de la licuadora ya sea apagada o encendida
-        */
+public class LicuadoraI implements Licuadora {
+    
+    /** 
+     * Objetos necesarios
+     * @param velocidad indica la velocidad de la licuadora
+     * @param volumen indica el volumen de la licuadora
+     * @param volumenRestado indica el volumen restado de la licuadora
+     * @param estado indica el estado de la licuadora ya sea apagada o encendida
+     */
 
         private byte velocidad;
         private byte volumen;
         private byte volumenRestado;
         private boolean estado;
+        Scanner scanner = new Scanner(System.in);
 
     /**
      * Constructores de los objetos
      */
 
-    public LicuadoraI(byte velocidad, byte volumen, byte volumenRestado, String estado){
+    public LicuadoraI(byte velocidad, byte volumen, byte volumenRestado, boolean estado){
         this.velocidad = 0;
         this.volumen = 0;
         this.volumenRestado = 0;
-        this.estado = "false";
+        this.estado = false;
     }
 
-    public byte get velocidad(){
+    public byte getVelocidad(){
         return velocidad;
     }
-    public void set velocidad(byte velocidad){
+    public void setVelocidad(byte velocidad){
         this.velocidad = velocidad;
     }
 
-    public byte get volumen(){
+    public byte getVolumen(){
         return volumen;
     }
-    public void set volumen(byte volumen){
+    public void setVolumen(byte volumen){
         this.volumen = volumen;
     }
 
-    public byte get volumenRestado(){
+    public byte getVolumenRestado(){
         return volumenRestado;
     }
-    public void set volumenRestado(byte volumenRestado){
+    public void setVolumenRestado(byte volumenRestado){
         this.volumenRestado = volumenRestado;
     }
 
-    public boolean get estado(){
+    public boolean getEstado(){
         return estado;
     }
-    public void set estado(boolean estado){
+    public void setEstado(boolean estado){
         this.estado = estado;
     }
 
@@ -91,12 +94,12 @@ public class LicuadoraI implements Licuadora{
      */
 
     public boolean estaEncendida(){
-        return estado;
-        if (estado = true){
+        if (estado){
             System.out.println("La licuadora esta encendida");
         } else{
             System.out.println("La licuadora esta apagada");
         }
+        return estado;
     }//cierre del metodo
 
     /**
@@ -118,10 +121,12 @@ public class LicuadoraI implements Licuadora{
         byte vmax = 10;
         if (velocidad < vmax){
             velocidad++;
-            System.out.println("La velocidad ha sido incrementada a"+velocidad+1);}   else{
-                
+            System.out.println("La velocidad ha sido incrementada a " + velocidad);
+            return velocidad;
+        } else {
             System.out.println("La velocidad no puede ser incrementada");
-        } 
+            return velocidad;
+        }
     }//cierre del metodo
 
     /**
@@ -132,10 +137,11 @@ public class LicuadoraI implements Licuadora{
         byte vmin = 0;
         if (velocidad > vmin){
             velocidad--;
-            System.out.println("La velocidad ha sido decrementada a"+velocidad-1);}   else{
-                
+            System.out.println("La velocidad ha sido decrementada a " + velocidad);
+        } else {
             System.out.println("La velocidad no puede ser decrementada");
         }
+        return velocidad;
     }//cierre del metodo
 
     /**
@@ -143,7 +149,7 @@ public class LicuadoraI implements Licuadora{
      * @return velocidad de la licuadora
      */
 
-    public int consultarVelocidad(double velocidad){
+    public double consultarVelocidad(double velocidad){
         if (!estado){
             System.out.println("La licuadora esta apagada. Velocidad: 0");
             return 0;
@@ -204,4 +210,6 @@ public class LicuadoraI implements Licuadora{
             return servido;
         }
     }//cierre del metodo
+
+
 }//cierre de la clase

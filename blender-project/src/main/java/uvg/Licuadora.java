@@ -1,11 +1,11 @@
+package uvg; 
 /**
  * Interfaz realizada para comprobar funcionamiento con otros grupos
  * @author toda la clase
- * @version 1.0
+ * @version 2.0
  */
 
  public interface Licuadora {
-    public interface Licuadora {
         void encender();
         void apagar();
         boolean estaEncendida();
@@ -16,5 +16,5 @@
         boolean estaLlena();
         double vaciar();
         double servir(double volumenRestado);
-        }}
+}
             
