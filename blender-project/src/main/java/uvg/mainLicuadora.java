@@ -6,7 +6,7 @@ public class mainLicuadora {
         Scanner scanner = new Scanner(System.in);
         
         
-        LicuadoraI licuadoraI = new LicuadoraI((byte) 0, (byte) 0, (byte) 0, "false");
+        LicuadoraI licuadoraI = new LicuadoraI(0, 0, 0, false);
         
         int opcion = -1;
         while (opcion != 0) {
