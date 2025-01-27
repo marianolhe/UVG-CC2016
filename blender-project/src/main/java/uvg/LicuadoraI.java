@@ -108,7 +108,7 @@ public class LicuadoraI implements Licuadora {
      */
 
     public double llenar(double volumen){
-        System.out.println("¿Qué volumen desea agregar a la licuadora?")
+        System.out.println("¿Qué volumen desea agregar a la licuadora?");
         volumen = volumen + scanner.nextDouble();
         return volumen;
     } //cierre del metodo
