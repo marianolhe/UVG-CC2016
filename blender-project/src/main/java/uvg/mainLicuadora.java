@@ -31,9 +31,7 @@ public class mainLicuadora {
                     licuadoraI.encender();
                     break;
                 case 2:
-                    System.out.print("Ingrese el volumen a llenar: ");
-                    double volumen = scanner.nextDouble();
-                    licuadoraI.llenar(volumen);
+                    licuadoraI.llenar(0);
                     break;
                 case 3:
                     licuadoraI.incrementarVelocidad();

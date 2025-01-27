@@ -103,15 +103,17 @@ public class LicuadoraI implements Licuadora {
     }//cierre del metodo
 
     /**
-     * Método que llena la licuadora
-     * @return volumen que fue añadido a la licuadora
+    * Método que llena la licuadora
+    * @param volumen cantidad inicial de líquido que se desea agregar
+    * @return volumen total después de llenar
      */
-
-    public double llenar(double volumen){
+    public double llenar(double volumen) {
         System.out.println("¿Qué volumen desea agregar a la licuadora?");
-        volumen = volumen + scanner.nextDouble();
-        return volumen;
-    } //cierre del metodo
+        double volumenAgregado = scanner.nextDouble(); // Lee el volumen que el usuario desea agregar
+        this.volumen += volumenAgregado; // Actualiza el atributo volumen de la clase
+        System.out.println("Se agregó " + volumenAgregado + " a la licuadora. Volumen total: " + this.volumen);
+        return this.volumen; // Devuelve el volumen actualizado
+    }//cierre del metodo
 
     /**
      * Método que incrementa la velocidad de la licuadora
