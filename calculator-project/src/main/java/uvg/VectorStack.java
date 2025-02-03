@@ -21,7 +21,7 @@ public class VectorStack<T> implements IStack<T> {
         if (item == null) {
             throw new IllegalArgumentException("No se puede insertar un elemento null");
         }
-        vector.add(item);
+        vector.add(item); // Add the item to the top of the stack
     }
     
     @Override
@@ -29,7 +29,7 @@ public class VectorStack<T> implements IStack<T> {
         if (isEmpty()) {
             throw new IllegalStateException("La pila está vacía");
         }
-        return vector.remove(vector.size() - 1);
+        return vector.remove(vector.size() - 1); // Remove and return the top item
     }
     
     @Override
@@ -37,16 +37,16 @@ public class VectorStack<T> implements IStack<T> {
         if (isEmpty()) {
             throw new IllegalStateException("La pila está vacía");
         }
-        return vector.get(vector.size() - 1);
+        return vector.get(vector.size() - 1); // Return the top item without removing it
     }
     
     @Override
     public boolean isEmpty() {
-        return vector.isEmpty();
+        return vector.isEmpty(); // Check if the stack is empty
     }
     
     @Override
     public void clear() {
-        vector.clear();
+        vector.clear(); // Remove all items from the stack
     }
 }
