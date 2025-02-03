@@ -22,4 +22,5 @@ public PostfixCalculatorException(String mensaje, int codigoError) {
 
 public int getCodigoError() {
     return codigoError;
-}}
+}
+}
