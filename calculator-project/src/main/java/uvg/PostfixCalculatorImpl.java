@@ -3,7 +3,7 @@ package uvg;
 public class PostfixCalculatorImpl implements ICalculadora {
     private IStack<Integer> stack;
 
-    // Constructor that initializes the stack
+    //Constructor que inicializa la pila
     public PostfixCalculatorImpl(IStack<Integer> stack) {
         if (stack == null) {
             throw new IllegalArgumentException("La pila no puede ser null");
@@ -17,13 +17,13 @@ public class PostfixCalculatorImpl implements ICalculadora {
             throw new PostfixCalculatorException("La expresión no puede ser null", PostfixCalculatorException.ERROR_EXPRESION_NULA);
         }
         
-        stack.clear(); // Clear the stack for a new evaluation
-        String[] tokens = expression.trim().split("\\s+"); // Split the expression into tokens
+        stack.clear(); // Limpiar la pila para una nueva evaluación
+        String[] tokens = expression.trim().split("\\s+");  // Dividir la expresión en tokens
         
         for (String token : tokens) {
             try {
                 if (isOperator(token)) {
-                    // Ensure there are enough operands in the stack
+                     // Asegurar que haya suficientes operandos en la pila
                     if (stack.isEmpty()) {
                         throw new PostfixCalculatorException("Operandos insuficientes", PostfixCalculatorException.ERROR_OPERANDOS_INSUFICIENTES);
                     }
@@ -32,16 +32,16 @@ public class PostfixCalculatorImpl implements ICalculadora {
                         throw new PostfixCalculatorException("Operandos insuficientes", PostfixCalculatorException.ERROR_OPERANDOS_INSUFICIENTES);
                     }
                     int a = stack.pop();
-                    stack.push(executeOperation(a, b, token)); // Execute the operation and push the result
+                    stack.push(executeOperation(a, b, token)); // Ejecutar la operación y apilar el resultado
                 } else {
-                    stack.push(Integer.parseInt(token)); // Push the number onto the stack
+                    stack.push(Integer.parseInt(token)); // Apilar el número en la pila
                 }
             } catch (NumberFormatException e) {
                 throw new PostfixCalculatorException("Carácter inválido: " + token, PostfixCalculatorException.ERROR_CARACTER_INVALIDO);
             }
         }
         
-        // Final result check
+        // Verificación del resultado final
         if (stack.isEmpty()) {
             throw new PostfixCalculatorException("Expresión vacía", PostfixCalculatorException.ERROR_EXPRESION_VACIA);
         }
@@ -51,15 +51,16 @@ public class PostfixCalculatorImpl implements ICalculadora {
             throw new PostfixCalculatorException("Expresión mal formada", PostfixCalculatorException.ERROR_EXPRESION_MALFORMADA);
         }
         
-        return result; // Return the final result
+        return result; // Retornar el resultado final
+    
     }
 
-    // Check if the token is an operator
+    // Verificar si el token es un operador
     private boolean isOperator(String token) {
         return token.matches("[+\\-*/%]");
     }
 
-    // Execute the operation based on the operator
+    // Verificar si el token es un operador
     private int executeOperation(int a, int b, String operator) throws PostfixCalculatorException {
         switch (operator) {
             case "+": return a + b;
