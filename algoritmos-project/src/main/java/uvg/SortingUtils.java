@@ -37,6 +37,8 @@ public class SortingUtils {
         while (j < right.length) {
             array[k++] = right[j++];
         }
+    }
+
         public static void quickSort(int[] array, int low, int high) {
             if (low < high) {
                 int pi = partition(array, low, high);
@@ -151,4 +153,3 @@ public class SortingUtils {
         }
     
     }
-}
