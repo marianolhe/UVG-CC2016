@@ -1,5 +1,6 @@
 package uvg;
 
+@FunctionalInterface
 public interface SortingAlgorithm {
-    x
+    void sort(int[] array);
 }
