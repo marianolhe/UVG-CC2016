@@ -3,6 +3,8 @@ package uvg;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
+
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SortingUtilsTest {
@@ -28,5 +30,35 @@ class SortingUtilsTest {
         int[] result = testArray.clone();
         SortingUtils.mergeSort(result);
         assertArrayEquals(sortedArray, result, "Merge Sort failed");
+    }
+
+    @Test
+    void testQuickSort() {
+        int[] result = testArray.clone();
+        SortingUtils.quickSort(result, 0, result.length - 1);
+        assertArrayEquals(sortedArray, result, "Quick Sort failed");
+    }
+
+    @Test
+    void testRadixSort() {
+        int[] result = testArray.clone();
+        SortingUtils.radixSort(result);
+        assertArrayEquals(sortedArray, result, "Radix Sort failed");
+    }
+
+    @Test
+    void testBucketSort() {
+        int[] result = testArray.clone();
+        SortingUtils.bucketSort(result);
+        assertArrayEquals(sortedArray, result, "Bucket Sort failed");
+    }
+
+    @Test
+    void testHeapSort() {
+        int[] result = testArray.clone();
+        SortingUtils.heapSort(result);
+        assertArrayEquals(sortedArray, result, "Heap Sort failed");
+    }
+}
 
 
