@@ -10,6 +10,8 @@ public class Main {
         IStack<Integer> stack = new VectorStack<>();
         ICalculadora calculator = new PostfixCalculatorImpl(stack);
         
+        String directorioActual = System.getProperty("user.dir"); System.out.println("Directorio actual: " + directorioActual);
+        
         // Intentar leer los datos del archivo
         try (BufferedReader reader = new BufferedReader(new FileReader("datos.txt"))) {
             String line;
