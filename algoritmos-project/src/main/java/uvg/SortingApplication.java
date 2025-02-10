@@ -5,7 +5,7 @@ import java.util.*;
 public class SortingApplication {
     public static void main(String[] args) throws IOException {
         SortingFileManager fileManager = new SortingFileManager("numbers.txt");
-        int[] numbers = SortingDataGenerator.generateRandomNumbers(3000);
+        int[] numbers = SortingDataGenerator.generateRandomNumbers(10000);
 
         fileManager.writeToFile(numbers);
         int[] data = fileManager.readFromFile();
