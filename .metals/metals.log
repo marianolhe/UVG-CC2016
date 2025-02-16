@@ -3903,3 +3903,145 @@ feb 15, 2025 10:58:33 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint 
 WARNING: Unsupported notification method: metals/windowStateDidChange
 feb 15, 2025 10:58:49 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2025.02.15 22:59:24 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.15 22:59:25 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+feb 15, 2025 10:59:50 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 10:59:51 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.15 22:59:52 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.15 22:59:52 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+feb 15, 2025 10:59:57 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 10:59:58 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.15 22:59:59 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.15 22:59:59 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.15 23:00:08 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.15 23:00:09 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+feb 15, 2025 11:00:09 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "class:/c%3A/Users/maria/OneDrive/Documentos/ALG/UVG-CC2016/HolaMundo%24package%24.class"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "class" not installed
+	at java.base/java.nio.file.Path.of(Path.java:213)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:774)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:771)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:718)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+feb 15, 2025 11:00:31 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:00:33 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:00:35 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:00:36 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.15 23:00:45 INFO  compiling algoritmos-project (6 java sources)
+2025.02.15 23:00:45 WARN  Unexpected javac output: warning: [options] bootstrap class path is not set in conjunction with -source 7
+  not setting the bootstrap class path may lead to class files that cannot run on JDK 8
+    --release 7 is recommended instead of -source 7 -target 1.7 because it sets the bootstrap class path automatically
+error: Source option 7 is no longer supported. Use 8 or later.
+error: Target option 7 is no longer supported. Use 8 or later..
+2025.02.15 23:00:45 WARN  javac: [options] bootstrap class path is not set in conjunction with -source 7
+2025.02.15 23:00:45 WARN  javac exited with exit code 2
+2025.02.15 23:00:45 INFO  time: compiled algoritmos-project in 0.48s
+feb 15, 2025 11:00:52 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 79
+feb 15, 2025 11:01:10 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:11 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:11 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "class:/c%3A/Users/maria/OneDrive/Documentos/ALG/UVG-CC2016/HolaMundo%24package%24.class"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "class" not installed
+	at java.base/java.nio.file.Path.of(Path.java:213)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:774)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:771)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:718)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+2025.02.15 23:01:12 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.15 23:01:12 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.15 23:01:14 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+feb 15, 2025 11:01:20 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:22 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:25 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:26 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:31 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:33 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:35 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:37 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:40 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:41 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:44 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:45 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:48 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:49 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:51 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:01:52 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:02:00 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 15, 2025 11:02:01 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
