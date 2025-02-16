@@ -18,7 +18,7 @@ public class SortingApplication {
         // testHeapSort(data);
     }
 
-    private static void testInsertionSort(int[] data) {
+    /*private static void testInsertionSort(int[] data) {
         int[] copy = data.clone();
         System.out.println("Ejecutando Insertion Sort...");
         SortingUtils.insertionSort(copy);
@@ -37,22 +37,22 @@ public class SortingApplication {
         System.out.println("Ejecutando Quick Sort...");
         SortingUtils.quickSort(copy, 0, copy.length - 1);
         System.out.println("Quick Sort completado.");
-    }
+    }*/
 
-    private static void testRadixSort(int[] data) {
-        int[] copy = data.clone();
+    /*private static void testRadixSort(int[] data) {
+       int[] copy = data.clone();
         System.out.println("Ejecutando Radix Sort...");
         SortingUtils.radixSort(copy);
         System.out.println("Radix Sort completado.");
     }
 
-    private static void testBucketSort(int[] data) {
+   private static void testBucketSort(int[] data) {
         int[] copy = data.clone();
         System.out.println("Ejecutando Bucket Sort...");
         SortingUtils.bucketSort(copy);
         System.out.println("Bucket Sort completado.");
-    }
 
+        */
     private static void testHeapSort(int[] data) {
         int[] copy = data.clone();
         System.out.println("Ejecutando Heap Sort...");
