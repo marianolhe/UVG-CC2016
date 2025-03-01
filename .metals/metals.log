@@ -4105,3 +4105,203 @@ SEVERE: A severe compiler error occurred, full details of the error can be found
 2025.02.27 21:18:58 INFO  shutting down Metals
 2025.02.27 21:18:58 INFO  Shut down connection with build server.
 2025.02.27 21:18:58 INFO  Exiting server
+2025.02.28 18:22:51 INFO  Started: Metals version 1.5.1 in folders 'C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016' for client Visual Studio Code 1.97.2.
+2025.02.28 18:22:55 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:22:58 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:22:58 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:22:58 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:22:59 INFO  Attempting to connect to the build server...
+2025.02.28 18:22:59 INFO  No running Bloop server found, starting one.
+2025.02.28 18:22:58 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:22:59 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6
+feb 28, 2025 6:22:59 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+feb 28, 2025 6:22:59 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8
+2025.02.28 18:22:59 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:22:59 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:23:00 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+feb 28, 2025 6:23:00 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+2025.02.28 18:22:59 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:22:59 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:22:59 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:22:59 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:23:00 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17
+feb 28, 2025 6:23:00 P. M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 19
+2025.02.28 18:23:00 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:23:00 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:23:05 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.28 18:23:05 INFO  Starting compilation server
+feb 28, 2025 6:23:08 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-23-08-692.md
+2025.02.28 18:23:13 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\bsp.trace.json or C:\Users\maria\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2025.02.28 18:23:14 INFO  time: Connected to build server in 15s
+2025.02.28 18:23:14 INFO  Connected to Build server: Bloop v2.0.8
+2025.02.28 18:23:14 INFO  time: Imported build in 0.27s
+2025.02.28 18:23:14 INFO  running doctor check
+2025.02.28 18:23:14 INFO  java targets: algoritmos-project-test, algoritmos-project
+feb 28, 2025 6:23:15 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.02.28 18:23:19 INFO  time: indexed workspace in 4.98s
+2025.02.28 18:23:19 WARN  no build target for: C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java
+2025.02.28 18:23:19 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:23:20 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-23-20-233.md
+feb 28, 2025 6:23:25 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.28 18:23:27 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:23:27 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-23-27-619.md
+2025.02.28 18:23:30 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:23:30 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-23-30-598.md
+2025.02.28 18:23:30 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:23:31 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-23-31-502.md
+feb 28, 2025 6:23:32 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:23:51 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.28 18:23:52 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:23:52 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-23-52-705.md
+feb 28, 2025 6:23:57 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:24:03 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:24:09 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+feb 28, 2025 6:24:31 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:24:34 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:24:36 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:24:57 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.28 18:25:23 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:25:23 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:25:24 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:25:25 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-25-25-652.md
+2025.02.28 18:25:34 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:25:34 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:25:36 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:25:36 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-25-36-773.md
+2025.02.28 18:25:37 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:25:37 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-25-37-942.md
+feb 28, 2025 6:26:01 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:26:08 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.28 18:26:13 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:26:13 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:26:14 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:26:14 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-26-14-847.md
+2025.02.28 18:26:14 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:26:15 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-26-15-109.md
+2025.02.28 18:26:17 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\scala\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:26:17 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\scala\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:26:18 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\scala\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:26:19 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:26:20 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:26:20 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:26:20 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-26-20-185.md
+feb 28, 2025 6:26:24 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.28 18:26:24 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:26:24 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:26:25 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:26:25 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-26-25-876.md
+2025.02.28 18:26:26 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:26:26 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\IStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:26:26 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-26-26-970.md
+feb 28, 2025 6:26:29 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:26:31 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.28 18:26:32 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\ICalculadora.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:26:32 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\ICalculadora.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:26:32 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-26-32-747.md
+feb 28, 2025 6:26:34 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:26:39 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.28 18:26:41 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\PostfixCalculatorException.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:26:41 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\PostfixCalculatorException.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:26:41 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-26-41-903.md
+feb 28, 2025 6:26:43 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:26:46 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.28 18:26:48 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\PostfixCalculatorImpl.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:26:48 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\PostfixCalculatorImpl.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:26:49 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-26-49-529.md
+2025.02.28 18:26:59 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:27:00 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:27:00 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-27-00-158.md
+2025.02.28 18:27:04 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:27:06 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:27:06 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:27:07 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-27-07-464.md
+2025.02.28 18:27:07 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:27:07 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-27-07-707.md
+2025.02.28 18:27:09 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:27:09 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:27:10 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\calculator-project\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:27:10 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-27-10-456.md
+feb 28, 2025 6:27:25 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:28:11 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:28:22 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:28:25 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.28 18:29:18 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\scala\HolaMundo.scala. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:29:18 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+feb 28, 2025 6:29:49 P. M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.28 18:29:49 WARN  Running javac-semanticdb failed for file:///C:/Users/maria/OneDrive/Documentos/ALG/UVG-CC2016/infixtopostfix/src/main/java/uvg/VectorStack.java. Output:
+
+2025.02.28 18:29:49 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:29:49 WARN  no build target for: C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java
+2025.02.28 18:29:49 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:29:50 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:29:49 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:29:49 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:29:56 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:29:57 WARN  no build target for: C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java
+2025.02.28 18:29:57 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:29:57 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-29-57-386.md
+2025.02.28 18:29:58 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+2025.02.28 18:30:08 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:30:08 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-30-08-743.md
+2025.02.28 18:30:21 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
+feb 28, 2025 6:30:22 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\.metals\.reports\metals-full\2025-02-28\r_compiler-error_18-30-22-005.md
+2025.02.28 18:30:21 INFO  no build target found for C:\Users\maria\OneDrive\Documentos\ALG\UVG-CC2016\infixtopostfix\src\main\java\uvg\VectorStack.java. Using presentation compiler with project's scala-library version: 3.3.4
