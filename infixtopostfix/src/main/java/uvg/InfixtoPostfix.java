@@ -1,8 +1,26 @@
 package uvg;
 import java.util.Stack;
 
-public class InfixtoPostfix{
-    public static String convert(String infix){
+/**
+ * Clase para convertir expresiones infijas a notación postfix.
+ */
+
+public class InfixtoPostfix {
+    
+    /**
+     * Convierte una expresión infija a notación postfix.
+     * 
+     * Precondiciones:
+     * - La expresión infija debe ser válida.
+     * 
+     * Postcondiciones:
+     * - Devuelve la expresión postfix correspondiente como una cadena.
+     * 
+     * @param infix La expresión infija a convertir.
+     * @return La representación postfix de la expresión.
+
+     */
+    public static String convert(String infix) {
         StringBuilder postfix = new StringBuilder();
         Stack<Character> stack = new Stack<>();
 
@@ -29,13 +47,20 @@ public class InfixtoPostfix{
         }
         return postfix.toString().trim();
     }
-    public static int precedence(char ch){
+
+    /**
+ * Retorna la precedencia del operador dado.
+ * 
+ * @param ch El carácter del operador.
+ * @return El nivel de precedencia del operador.
+ */
+
+    public static int precedence(char ch) {
         return switch (ch){
             case '+', '-' -> 1;
             case '*', '/' -> 2;
             case '^' -> 3;
             default -> -1;
         };
-
     }
 }

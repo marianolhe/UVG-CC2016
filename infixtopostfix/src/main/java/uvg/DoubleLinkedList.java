@@ -1,5 +1,11 @@
 package uvg;
 
+/**
+ * Implementación de la interfaz IList usando una lista doblemente enlazada.
+ * 
+ * @param <T> el tipo de elementos almacenados en la lista
+ */
+
 public class DoubleLinkedList<T> implements IList<T> {
     private class Node {
         T data;

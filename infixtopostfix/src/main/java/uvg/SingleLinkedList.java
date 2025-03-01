@@ -1,5 +1,11 @@
 package uvg;
 
+/**
+ * Implementación de la interfaz IList usando una lista enlazada simple.
+ * 
+ * @param <T> el tipo de elementos almacenados en la lista
+ */
+
 public class SingleLinkedList<T> implements IList<T> {
     private class Node {
         T data;
@@ -46,4 +52,3 @@ public class SingleLinkedList<T> implements IList<T> {
         head = null;
     }
 }
-

@@ -3,12 +3,30 @@ package uvg;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-
+/**
+ * Clase principal de la aplicación de la Calculadora Postfija.
+ * Esta clase inicializa la calculadora y procesa las expresiones de entrada.
+ */
 public class Main {
+    
+    /**
+     * Método principal para ejecutar la Calculadora Postfija.
+     * 
+     * Precondiciones: 
+     * - El archivo "datos.txt" debe existir en el directorio de trabajo actual.
+     * 
+     * Postcondiciones:
+     * - Evalúa las expresiones del archivo y muestra los resultados en la consola.
+     * 
+     * @param args Argumentos de línea de comandos (no utilizados).
+     */
+
+
     public static void main(String[] args) {
         // Inciar la calculadora postfix y el stack
         IStack<Integer> stack = StackFactory.createStack();
-        ICalculadora calculator = new PostfixCalculatorImpl(stack);
+        ICalculadora calculator = new PostfixCalculatorImpl(stack); // Calculator implementation using the stack
+
         InfixtoPostfix InfixtoPostfix = new InfixtoPostfix();
         
         String directorioActual = System.getProperty("user.dir"); 
