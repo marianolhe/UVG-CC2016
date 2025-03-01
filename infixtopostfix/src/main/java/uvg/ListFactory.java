@@ -1,9 +1,10 @@
+
 package uvg;
 
 import java.util.Scanner;
 
 public class ListFactory {
-     /**
+    /**
      * @param <T>
      * @return
      */
@@ -14,12 +15,20 @@ public class ListFactory {
         System.out.println("2. Doblemente Enlazada");
 
         int choice = scanner.nextInt();
+        IList<T> list;
         switch (choice) {
-            case 1: return new SingleLinkedList<>();
-            case 2: return new DoubleLinkedList<>();
+            case 1:
+                list = new SingleLinkedList<>();
+                break;
+            case 2:
+                list = new DoubleLinkedList<>();
+                break;
             default:
                 System.out.println("Opción no válida. Se usará Lista Simplemente Enlazada por defecto.");
-                return new SingleLinkedList<>();
-            }
+                list = new SingleLinkedList<>();
+                break;
         }
+        scanner.close();
+        return list;
+    }
 }

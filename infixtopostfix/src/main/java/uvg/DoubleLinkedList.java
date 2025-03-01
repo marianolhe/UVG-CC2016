@@ -4,12 +4,10 @@ public class DoubleLinkedList<T> implements IList<T> {
     private class Node {
         T data;
         Node next;
-        Node prev;
 
         Node(T data) {
             this.data = data;
             this.next = null;
-            this.prev = null;
         }
     }
 
@@ -24,7 +22,6 @@ public class DoubleLinkedList<T> implements IList<T> {
             tail = newNode;
         } else {
             tail.next = newNode;
-            newNode.prev = tail;
             tail = newNode;
         }
     }
@@ -36,11 +33,6 @@ public class DoubleLinkedList<T> implements IList<T> {
         }
         T data = head.data;
         head = head.next;
-        if (head != null) {
-            head.prev = null;
-        } else {
-            tail = null;
-        }
         return data;
     }
 
