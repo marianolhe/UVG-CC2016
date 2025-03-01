@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
         // Inciar la calculadora postfix y el stack
-        IStack<Integer> stack = StackFactory:createStack<>();
+        IStack<Integer> stack = StackFactory.createStack();
         ICalculadora calculator = new PostfixCalculatorImpl(stack);
         InfixtoPostfix InfixToPostfix = new InfixtoPostfix();
         

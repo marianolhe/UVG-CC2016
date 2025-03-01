@@ -4,7 +4,7 @@ public class PostfixCalculatorImpl implements ICalculadora {
     private static PostfixCalculatorImpl instance;
     private IStack<Integer> stack;
 
-    private PostfixCalculatorImpl(IStack<Integer> stack) {
+    public PostfixCalculatorImpl(IStack<Integer> stack) {
         this.stack = stack;
     }
 

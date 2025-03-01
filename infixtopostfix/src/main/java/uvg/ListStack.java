@@ -33,6 +33,6 @@ public class ListStack<T> implements IStack<T> {
 
     @Override
     public void clear() {
-        stack.clear();
-    }
+    stack.clear();
+}
 }
