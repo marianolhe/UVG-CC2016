@@ -43,7 +43,7 @@ public class SingleLinkedList<T> implements IList<T> {
 
     @Override
     public void clear() {
-        head = null;
-    }
+        head = null;
+    }
 }
 

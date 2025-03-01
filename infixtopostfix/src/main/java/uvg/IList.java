@@ -1,5 +1,8 @@
 package uvg;
 
-public class IList<T> {
-
+public interface IList<T> {
+    void add(T item);
+    T remove();
+    boolean isEmpty();
+    void clear();
 }
