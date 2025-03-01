@@ -9,9 +9,10 @@ public class Main {
         // Inciar la calculadora postfix y el stack
         IStack<Integer> stack = StackFactory.createStack();
         ICalculadora calculator = new PostfixCalculatorImpl(stack);
-        InfixtoPostfix InfixToPostfix = new InfixtoPostfix();
+        InfixtoPostfix InfixtoPostfix = new InfixtoPostfix();
         
-        String directorioActual = System.getProperty("user.dir"); System.out.println("Directorio actual: " + directorioActual);
+        String directorioActual = System.getProperty("user.dir"); 
+        System.out.println("Directorio actual: " + directorioActual);
         
         // Intentar leer los datos del archivo
         try (BufferedReader reader = new BufferedReader(new FileReader("datos.txt"))) {
@@ -20,7 +21,7 @@ public class Main {
             while ((line = reader.readLine()) != null) {
                 try {
                     // evaluar la expresión e imprimir el resultado
-                    String postfixExpression = InfixToPostfix.convert(line);
+                    String postfixExpression = InfixtoPostfix.convert(line);
                     int result = calculator.evaluate(postfixExpression);
                     System.out.println("Expresión: " + line);
                     System.out.println("Resultado: " + result);

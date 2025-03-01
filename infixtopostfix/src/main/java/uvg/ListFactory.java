@@ -3,7 +3,11 @@ package uvg;
 import java.util.Scanner;
 
 public class ListFactory {
-     public static <T> IList<T> createList() {
+     /**
+     * @param <T>
+     * @return
+     */
+    public static <T> IList<T> createList() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Seleccione la implementación de la lista:");
         System.out.println("1. Simplemente Enlazada");
@@ -16,6 +20,6 @@ public class ListFactory {
             default:
                 System.out.println("Opción no válida. Se usará Lista Simplemente Enlazada por defecto.");
                 return new SingleLinkedList<>();
-        }
-    }
+            }
+        }
 }
