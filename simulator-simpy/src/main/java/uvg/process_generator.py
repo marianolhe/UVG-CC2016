@@ -19,10 +19,10 @@ class ProcessGenerator:
         self.action = env.process(self.generate())
 
         def generate(self):
-        
-        # Genera nuevos procesos en intervalos de tiempo exponenciales hasta alcanzar el límite.
-        
-        while self.process_count < self.num_processes:
-            yield self.env.timeout(random.expovariate(1.0 / self.interval))
-            Process(self.env, self.process_count, self.memory, self.cpu, self.start_times, self.end_times, self.cpu_quantum)
-            self.process_count += 1
+            """
+            Genera nuevos procesos en intervalos de tiempo exponenciales hasta alcanzar el límite.
+            """
+            while self.process_count < self.num_processes:
+                yield self.env.timeout(random.expovariate(1.0 / self.interval))
+                Process(self.env, self.process_count, self.memory, self.cpu, self.start_times, self.end_times, self.cpu_quantum)
+                self.process_count += 1
