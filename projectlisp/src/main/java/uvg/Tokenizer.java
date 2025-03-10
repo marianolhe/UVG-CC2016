@@ -43,15 +43,19 @@ public class Tokenizer {
         }
 
         String[] TokenPatterns = {
-            "defun|if|c|cond|setq",         // Keywords
-            "[+-/*=<>!]",                // Operators
-            "[()]",                 // Punctuation
+            "defun|if|c|cond|setq",         // Palabras clave de LISP
+            "[+-/*=<>!]",                // Operaciones
+            "[()]",                 // Puntuacion de LISP
+            "\\d+",                     // Numeros
+            "\\s+",                     // Espacios en blanco
         };
 
         TokenType[] TokenTypes = {
             TokenType.KEYWORD,
             TokenType.OPERATOR,
             TokenType.PUNCTUATION,
+            TokenType.NUMBER,
+            TokenType.WHITESPACE,
         };
 
         for (int i = 0; i < TokenPatterns.length; i++) {
