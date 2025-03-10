@@ -46,8 +46,10 @@ public class Tokenizer {
             "defun|if|c|cond|setq",         // Palabras clave de LISP
             "[+-/*=<>!]",                // Operaciones
             "[()]",                 // Puntuacion de LISP
+            "\"[^\"]*\"",               // Strings
             "\\d+",                     // Numeros
             "\\s+",                     // Espacios en blanco
+            "[a-zA-Z_][a-zA-Z0-9_]*"    //Identificadores (variables/ nombres de funciones)
         };
 
         TokenType[] TokenTypes = {
@@ -56,6 +58,8 @@ public class Tokenizer {
             TokenType.PUNCTUATION,
             TokenType.NUMBER,
             TokenType.WHITESPACE,
+            TokenType.STRING, 
+            TokenType.IDENTIFIER
         };
 
         for (int i = 0; i < TokenPatterns.length; i++) {
