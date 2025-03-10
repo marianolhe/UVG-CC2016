@@ -46,10 +46,8 @@ public class Tokenizer {
             "defun|if|c|cond|setq",         // Palabras clave de LISP
             "[+-/*=<>!]",                // Operaciones
             "[()]",                 // Puntuacion de LISP
-            "\"[^\"]*\"",               // Strings
             "\\d+",                     // Numeros
             "\\s+",                     // Espacios en blanco
-            "[a-zA-Z_][a-zA-Z0-9_]*"    //Identificadores (variables/ nombres de funciones)
         };
 
         TokenType[] TokenTypes = {
@@ -58,18 +56,16 @@ public class Tokenizer {
             TokenType.PUNCTUATION,
             TokenType.NUMBER,
             TokenType.WHITESPACE,
-            TokenType.STRING, 
-            TokenType.IDENTIFIER
         };
 
         for (int i = 0; i < TokenPatterns.length; i++) {
-            Pattern pattern = Pattern.compile("^" + TokenPatterns[i]);
-            Matcher matcher = pattern.matcher(input.substring(currrentPosition));
+            Pattern pattern = Pattern.compile("^" + TokenPatterns[i]); //crea regex
+            Matcher matcher = pattern.matcher(input.substring(currrentPosition)); //aplica regex
 
-            if (matcher.find()) {
-                String value = matcher.group();
-                currrentPosition += value.length();
-                return new Token(TokenTypes[i], value);
+            if (matcher.find()) { //si hay coincidencia
+                String value = matcher.group(); //agarra el texto
+                currrentPosition += value.length(); //sigue en la cadena
+                return new Token(TokenTypes[i], value); //devuelve un nuevo token
             }
         }
 
