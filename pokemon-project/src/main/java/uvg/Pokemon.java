@@ -1,3 +1,4 @@
+package uvg;
 /**
  * Clase que representa un Pokémon con atributos básicos.
  */

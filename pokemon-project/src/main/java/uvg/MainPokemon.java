@@ -1,3 +1,8 @@
+package uvg;
+
+import java.io.IOException;
+import java.util.Scanner;
+
 /**
  * Clase principal que contiene el método main para ejecutar el programa.
  */
@@ -19,5 +24,6 @@ public class MainPokemon {
         System.out.println("Ingrese un nombre de Pokémon a buscar:");
         String name = scanner.nextLine();
         System.out.println(manager.getPokemon(name));
+        scanner.close();
     }
 }

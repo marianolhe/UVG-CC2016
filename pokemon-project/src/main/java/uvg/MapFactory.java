@@ -1,3 +1,10 @@
+package uvg;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
 /**
  * Clase fábrica que devuelve distintos tipos de Map según se requiera.
  */
