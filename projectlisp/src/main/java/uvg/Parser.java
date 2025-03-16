@@ -1,31 +1,28 @@
 package uvg;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
+/**
+ * Analiza los tokens y construye un árbol de expresiones.
+ */
 public class Parser {
     private List<Token> tokens;
     private int currentPosition;
 
     public Parser(List<Token> tokens) {
         this.tokens = tokens;
-        this.currentPosition = 0; // aquí comienza desde el primer token
+        this.currentPosition = 0;
     }
 
-    // Método principal para iniciar el análisis
     public Expression parse() {
-        if (tokens.isEmpty()) {
-            throw new RuntimeException("Error: No hay tokens para analizar.");
+        if (currentPosition >= tokens.size()) {
+            throw new RuntimeException("No hay tokens para analizar");
         }
         return parseExpression();
     }
 
-    // Método para analizar una expresión
     private Expression parseExpression() {
-        if (currentPosition >= tokens.size()) {
-            throw new RuntimeException("Error: Expresión incompleta.");
-        }
-        
         // Obtiene el token actual y avanza a la siguiente posición
         Token token = tokens.get(currentPosition);
         currentPosition++;
@@ -38,6 +35,11 @@ public class Parser {
         else if (token.getType() == TokenType.NUMBER) {
             return new NumberExpression(Integer.parseInt(token.getValue()));
         } 
+        // identificador, se crea una expresión de símbolo
+        else if (token.getType() == TokenType.IDENTIFIER || token.getType() == TokenType.KEYWORD || 
+                token.getType() == TokenType.OPERATOR) {
+            return new SymbolExpression(token.getValue());
+        }
         else {
             throw new RuntimeException("Error: Token inesperado: " + token.getValue());
         }
@@ -45,32 +47,28 @@ public class Parser {
     
     // Método para analizar una expresión de lista
     private Expression parseListExpression() {
-        if (currentPosition >= tokens.size()) {
-            throw new RuntimeException("Error: Se esperaba un operador después de '('.");
+        List<Expression> elements = new ArrayList<>();
+        
+        // Leer expresiones hasta encontrar el paréntesis de cierre
+        while (currentPosition < tokens.size()) {
+            Token current = tokens.get(currentPosition);
+            
+            // Ignorar espacios en blanco
+            if (current.getType() == TokenType.WHITESPACE) {
+                currentPosition++;
+                continue;
+            }
+            
+            // Si se encuentra un paréntesis de cierre, finalizar la lista
+            if (current.getType() == TokenType.PUNCTUATION && current.getValue().equals(")")) {
+                currentPosition++; // Consumir el paréntesis
+                return new ListExpression(elements);
+            }
+            
+            // Analizar la siguiente expresión y añadirla a la lista
+            elements.add(parseExpression());
         }
         
-        // Obtiene el siguiente token que debe ser un operador
-        Token operatorToken = tokens.get(currentPosition);
-        currentPosition++;
-        
-        if (operatorToken.getType() != TokenType.IDENTIFIER && operatorToken.getType() != TokenType.KEYWORD) {
-            throw new RuntimeException("Error: Se esperaba un operador válido, pero se encontró: " + operatorToken.getValue());
-        }
-        
-        List<Expression> operands = new ArrayList<>();
-        
-        // Analiza los operandos mientras no encuentre el cierre ')'
-        while (currentPosition < tokens.size() && 
-               !(tokens.get(currentPosition).getType() == TokenType.PUNCTUATION && tokens.get(currentPosition).getValue().equals(")"))) {
-            operands.add(parseExpression());
-        }
-        
-        if (currentPosition >= tokens.size()) {
-            throw new RuntimeException("Error: Se esperaba ')' para cerrar la expresión.");
-        }
-        
-        currentPosition++;
-        // Devuelve la expresión de lista con el operador y los operandos
-        return new ListExpression(operatorToken.getValue(), operands);
+        throw new RuntimeException("Error: Se esperaba un paréntesis de cierre ')'");
     }
 }

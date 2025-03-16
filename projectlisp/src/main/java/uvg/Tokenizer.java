@@ -1,75 +1,80 @@
 package uvg;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-///Codigo de: https://medium.com/@enzojade62/step-by-step-building-a-lexer-in-java-for-Tokenizing-source-code-ac4f1d91326f
-
 public class Tokenizer {
     private String input;
-    private int currrentPosition;
-    
-    public Tokenizer (String input){
+    private int currentPosition;
+    private List<Token> tokens;
+
+    public Tokenizer(String input) {
         this.input = input;
-        this.currrentPosition = 0;
+        this.currentPosition = 0;
+        this.tokens = new ArrayList<>();
     }
 
-    public List<Token> Tokenize () {
-        List<Token> Tokens = new ArrayList<>();
-
-        while (currrentPosition < input.length()) {
-            char currentChar = input.charAt(currrentPosition);
-
-            if (Character.isWhitespace(currentChar)) {
-                currrentPosition++;
-                continue;
-            }
-
-            Token Token = nextToken();
-            if (Token != null) {
-                Tokens.add(Token);
-            } else {
-                throw new RuntimeException("Unknown character: " + currentChar);
+    public List<Token> Tokenize() {
+        tokens.clear();
+        Token token;
+        
+        // Eliminar comentarios si existen
+        input = removeComments(input);
+        
+        while ((token = nextToken()) != null) {
+            // Ignorar espacios en blanco
+            if (token.getType() != TokenType.WHITESPACE) {
+                tokens.add(token);
             }
         }
+        
+        return tokens;
+    }
 
-        return Tokens;
+    private String removeComments(String code) {
+        // Eliminar comentarios de línea estilo ;
+        return code.replaceAll(";.*", "");
     }
 
     private Token nextToken() {
-        if (currrentPosition >= input.length()) {
+        if (currentPosition >= input.length()) {
             return null;
         }
 
-        String[] TokenPatterns = {
-            "defun|if|c|cond|setq",         // Palabras clave de LISP
-            "[+-/*=<>!]",                // Operaciones
-            "[()]",                 // Puntuacion de LISP
-            "\\d+",                     // Numeros
-            "\\s+",                     // Espacios en blanco
+        String[] tokenPatterns = {
+            "defun|if|cond|setq|quote",  // Palabras clave de LISP
+            "[+-/*=<>!]",                // Operadores
+            "[()]",                      // Puntuación
+            "\\d+",                      // Números
+            "\\s+",                      // Espacios en blanco
+            "[a-zA-Z_][a-zA-Z0-9_]*"     // Identificadores
         };
 
-        TokenType[] TokenTypes = {
+        TokenType[] tokenTypes = {
             TokenType.KEYWORD,
             TokenType.OPERATOR,
             TokenType.PUNCTUATION,
             TokenType.NUMBER,
             TokenType.WHITESPACE,
+            TokenType.IDENTIFIER
         };
 
-        for (int i = 0; i < TokenPatterns.length; i++) {
-            Pattern pattern = Pattern.compile("^" + TokenPatterns[i]); //crea regex
-            Matcher matcher = pattern.matcher(input.substring(currrentPosition)); //aplica regex
+        for (int i = 0; i < tokenPatterns.length; i++) {
+            Pattern pattern = Pattern.compile("^" + tokenPatterns[i]);
+            Matcher matcher = pattern.matcher(input.substring(currentPosition));
 
-            if (matcher.find()) { //si hay coincidencia
-                String value = matcher.group(); //agarra el texto
-                currrentPosition += value.length(); //sigue en la cadena
-                return new Token(TokenTypes[i], value); //devuelve un nuevo token
+            if (matcher.find()) {
+                String value = matcher.group();
+                currentPosition += value.length();
+                return new Token(tokenTypes[i], value);
             }
         }
 
-        return null;
+        // Si llegamos aquí, hay un token desconocido
+        String unknown = input.substring(currentPosition, currentPosition + 1);
+        currentPosition++;
+        return new Token(TokenType.UNKNOWN, unknown);
     }
 }
-
