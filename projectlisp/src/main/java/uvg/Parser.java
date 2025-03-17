@@ -4,17 +4,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Analiza los tokens y construye un árbol de expresiones.
+ * Clase encargada de analizar una lista de tokens y construir una estructura de expresiones.
  */
 public class Parser {
     private List<Token> tokens;
     private int currentPosition;
 
+    /**
+     * Constructor de la clase Parser.
+     * Inicializa el analizador con una lista de tokens.
+     * @param tokens Lista de tokens generada por el Tokenizer.
+     */
     public Parser(List<Token> tokens) {
         this.tokens = tokens;
-        this.currentPosition = 0;
+        this.currentPosition = 0; // Inicializa en la primera posición
     }
 
+    /**
+     * Inicia el proceso de análisis sintáctico de los tokens.
+     * Se espera que los tokens formen una expresión válida.
+     * @return Una expresión representada como un objeto de tipo Expression.
+     * @throws RuntimeException si no hay tokens disponibles para analizar.
+     */      
     public Expression parse() {
         if (currentPosition >= tokens.size()) {
             throw new RuntimeException("No hay tokens para analizar");
@@ -22,6 +33,12 @@ public class Parser {
         return parseExpression();
     }
 
+    /**
+     * Método privado que analiza una única expresión a partir de los tokens.
+     * Identifica si se trata de un número, un símbolo o una expresión en paréntesis.
+     * @return Una instancia de Expression que representa la expresión analizada.
+     * @throws RuntimeException si se encuentra un token inesperado o inválido.
+     */    
     private Expression parseExpression() {
         // Obtiene el token actual y avanza a la siguiente posición
         Token token = tokens.get(currentPosition);
@@ -45,7 +62,12 @@ public class Parser {
         }
     }
     
-    // Método para analizar una expresión de lista
+    /**
+     * Método privado que analiza una expresión de lista, que comienza con '('.
+     * Se encarga de procesar múltiples expresiones dentro de los paréntesis.
+     * @return Una instancia de ListExpression que representa la lista de expresiones.
+     * @throws RuntimeException si no se encuentra el paréntesis de cierre ')'.
+     */
     private Expression parseListExpression() {
         List<Expression> elements = new ArrayList<>();
         
