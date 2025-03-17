@@ -5,21 +5,31 @@ import java.util.Scanner;
 
 /**
  * Intérprete LISP interactivo.
- * Permite ingresar expresiones LISP y muestra su evaluación.
+ * Permite al usuario ingresar expresiones LISP, analizarlas y obtener su resultado.
+ * Proporciona una interfaz interactiva donde se pueden escribir expresiones LISP y ver su evaluación.
+ * También incluye ejemplos de código y una opción para salir o pedir ayuda.
  */
+
 public class MainProjectLisp {
 
+    /**
+     * Método principal que inicia el intérprete LISP en modo interactivo.
+     */
     public static void main(String[] args) {
         // Iniciar el modo interactivo
         interactiveMode();
     }
-    
+
+    /**
+     * Modo interactivo donde el usuario puede escribir expresiones LISP, recibir
+     * su evaluación y ver el análisis de los tokens y el resultado.
+     */    
     private static void interactiveMode() {
         Scanner scanner = new Scanner(System.in);
         Environment globalEnv = new Environment();
         
         System.out.println("======================================");
-        System.out.println("   INTÉRPRETE LISP - MODO INTERACTIVO");
+        System.out.println("   INTÉRPRETE LISP - MODO INTERACTIVO ");
         System.out.println("======================================");
         System.out.println("Escribe expresiones LISP para evaluarlas.");
         System.out.println("Escribe 'salir' para terminar.");
@@ -64,6 +74,12 @@ public class MainProjectLisp {
         scanner.close();
     }
     
+    /**
+     * Formatea los tokens para mostrar solo una muestra si hay demasiados.
+     * 
+     * @param tokens Lista de tokens a formatear.
+     * @return Cadena representando los tokens.
+     */    
     private static String formatTokens(List<Token> tokens) {
         if (tokens.size() > 10) {
             return tokens.subList(0, 5) + " ... " + 
@@ -72,7 +88,9 @@ public class MainProjectLisp {
         }
         return tokens.toString();
     }
-    
+    /**
+     * Muestra ejemplos de código LISP para ayudar al usuario.
+     */    
     private static void showHelp() {
         System.out.println("\n=== Ejemplos de código LISP ===");
         System.out.println("1. Operaciones aritméticas:");
@@ -95,6 +113,16 @@ public class MainProjectLisp {
         System.out.println("   (factorial 5)");
     }
 
+
+    /**
+     * Interpreta el código LISP proporcionado, pasando por los pasos de tokenización,
+     * análisis sintáctico, generación de código Java y evaluación de la expresión.
+     * 
+     * @param code Código LISP a interpretar.
+     * @param env Entorno en el que se evalúa la expresión.
+     * @return El resultado de la interpretación, incluyendo tokens, expresión y resultado.
+     * @throws Exception Si ocurre un error en cualquier paso de la interpretación.
+     */    
     private static LispResult interpretLisp(String code, Environment env) {
         LispResult result = new LispResult();
         
