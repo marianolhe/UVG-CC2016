@@ -11,14 +11,32 @@ import java.util.stream.Collectors;
 public class ListExpression extends Expression {
     private final List<Expression> elements;
 
+     /**
+     * Constructor de la expresión de lista.
+     * 
+     * @param elements La lista de elementos que componen la expresión.
+     */
+   
     public ListExpression(List<Expression> elements) {
         this.elements = elements;
     }
-
+    /**
+     * Obtiene los elementos que componen la expresión de lista.
+     * 
+     * @return Una lista de expresiones.
+     */
     public List<Expression> getElements() {
         return elements;
     }
 
+    /**
+     * Evalúa la expresión en el entorno dado.
+     * Puede ser una forma especial o una aplicación de función.
+     * 
+     * @param env El entorno de ejecución donde se evalúa la expresión.
+     * @return El resultado de la evaluación.
+     * @throws RuntimeException Si ocurre un error en la evaluación.
+     */
     @Override
     public Object evaluate(Environment env) {
         if (elements.isEmpty()) {
@@ -52,6 +70,13 @@ public class ListExpression extends Expression {
         return evaluateFunction(env);
     }
 
+    /**
+     * Evalúa la forma especial <code>setq</code> (asignación de variable).
+     * 
+     * @param env El entorno de ejecución donde se realiza la asignación.
+     * @return El valor asignado a la variable.
+     * @throws RuntimeException Si los argumentos son incorrectos.
+     */    
     private Object evaluateSetq(Environment env) {
         if (elements.size() != 3) {
             throw new RuntimeException("setq requiere exactamente 2 argumentos");
@@ -67,6 +92,13 @@ public class ListExpression extends Expression {
         return value;
     }
 
+    /**
+     * Evalúa la forma especial <code>defun</code> (definición de función).
+     * 
+     * @param env El entorno de ejecución donde se define la función.
+     * @return El nombre de la función definida.
+     * @throws RuntimeException Si los argumentos son incorrectos.
+     */
     private Object evaluateDefun(Environment env) {
         if (elements.size() < 4) {
             throw new RuntimeException("defun requiere al menos 3 argumentos");
@@ -105,6 +137,13 @@ public class ListExpression extends Expression {
         return funcName;
     }
 
+    /**
+     * Evalúa la forma especial <code>if</code> (condicional).
+     * 
+     * @param env El entorno de ejecución donde se evalúa la condición.
+     * @return El resultado de la evaluación, dependiendo de la condición.
+     * @throws RuntimeException Si los argumentos son incorrectos.
+     */
     private Object evaluateIf(Environment env) {
         if (elements.size() < 3 || elements.size() > 4) {
             throw new RuntimeException("if requiere 2 o 3 argumentos");
@@ -119,6 +158,13 @@ public class ListExpression extends Expression {
         return null; // nil en Lisp
     }
 
+    /**
+     * Evalúa la forma especial <code>cond</code> (evaluación condicional).
+     * 
+     * @param env El entorno de ejecución donde se evalúan las cláusulas.
+     * @return El resultado de la cláusula evaluada.
+     * @throws RuntimeException Si las cláusulas son incorrectas.
+     */
     private Object evaluateCond(Environment env) {
         for (int i = 1; i < elements.size(); i++) {
             Expression clause = elements.get(i);
@@ -147,6 +193,13 @@ public class ListExpression extends Expression {
         return null; // nil en Lisp
     }
 
+    /**
+     * Evalúa una aplicación de función con los argumentos dados.
+     * 
+     * @param env El entorno de ejecución donde se evalúa la función.
+     * @return El resultado de aplicar la función.
+     * @throws RuntimeException Si no se puede aplicar la función.
+     */
     private Object evaluateFunction(Environment env) {
         Object func = elements.get(0).evaluate(env);
         
@@ -167,10 +220,21 @@ public class ListExpression extends Expression {
         throw new RuntimeException("No se puede aplicar: " + func);
     }
 
+    /**
+     * Verifica si un valor es considerado verdadero en LISP.
+     * 
+     * @param value El valor a verificar.
+     * @return <code>true</code> si el valor es verdadero, <code>false</code> en caso contrario.
+     */
     private boolean isTruthy(Object value) {
         return value != null && !(value instanceof Boolean && !((Boolean) value));
     }
     
+    /**
+     * Representa la expresión en formato de cadena.
+     * 
+     * @return La representación de la expresión como una cadena.
+     */    
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("(");
