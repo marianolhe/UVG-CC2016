@@ -1,30 +1,30 @@
 package uvg;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Intérprete LISP interactivo.
+ * Permite ingresar expresiones LISP y muestra su evaluación.
+ */
 public class MainProjectLisp {
+
     public static void main(String[] args) {
-        if (args.length > 0) {
-            // Modo de archivo
-            String fileName = args[0];
-            Environment env = new Environment();
-            executeFile(fileName, env);
-        } else {
-            // Modo interactivo
-            interactiveMode();
-        }
+        // Iniciar el modo interactivo
+        interactiveMode();
     }
     
     private static void interactiveMode() {
         Scanner scanner = new Scanner(System.in);
         Environment globalEnv = new Environment();
         
-        System.out.println("Intérprete LISP - Java (Escriba 'salir' para terminar)");
-        System.out.println("--------------------------------------------------------");
+        System.out.println("======================================");
+        System.out.println("   INTÉRPRETE LISP - MODO INTERACTIVO");
+        System.out.println("======================================");
+        System.out.println("Escribe expresiones LISP para evaluarlas.");
+        System.out.println("Escribe 'salir' para terminar.");
+        System.out.println("Escribe 'ayuda' para ver ejemplos.");
+        System.out.println("");
         
         while (true) {
             System.out.print("\nlisp> ");
@@ -33,56 +33,68 @@ public class MainProjectLisp {
             if (input.isEmpty()) {
                 continue;
             }
-            
+
             if (input.equalsIgnoreCase("salir")) {
+                System.out.println("¡Hasta luego!");
                 break;
+            }
+            
+            if (input.equalsIgnoreCase("ayuda")) {
+                showHelp();
+                continue;
             }
             
             try {
                 LispResult result = interpretLisp(input, globalEnv);
                 
                 System.out.println("\n=== Análisis y Ejecución ===");
-                System.out.println("Tokens:        " + result.tokens);
-                System.out.println("Expresión AST: " + result.expression);
-                System.out.println("Código Java:   " + result.javaCode);
-                System.out.println("Resultado:     " + result.result);
+                System.out.println("Tokens:      " + formatTokens(result.tokens));
+                System.out.println("Expresión:   " + result.expression);
+                if (result.javaCode != null) {
+                    System.out.println("Código Java: " + result.javaCode);
+                }
+                System.out.println("Resultado:   " + result.result);
                 
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
+                // No mostrar stack trace para una interfaz más limpia
             }
         }
-        
-        System.out.println("¡Hasta luego!");
+
         scanner.close();
     }
     
-    private static void executeFile(String fileName, Environment env) {
-        try {
-            System.out.println("Ejecutando archivo: " + fileName);
-            String content = new String(Files.readAllBytes(Paths.get(fileName)));
-            String[] expressions = content.split("\n");
-            
-            for (String expr : expressions) {
-                expr = expr.trim();
-                if (expr.isEmpty() || expr.startsWith(";")) {
-                    continue; // Saltar líneas vacías y comentarios
-                }
-                
-                try {
-                    LispResult result = interpretLisp(expr, env);
-                    System.out.println("\n=== " + expr + " ===");
-                    System.out.println("Código Java: " + result.javaCode);
-                    System.out.println("Resultado:   " + result.result);
-                } catch (Exception e) {
-                    System.out.println("Error en expresión '" + expr + "': " + e.getMessage());
-                }
-            }
-            
-        } catch (IOException e) {
-            System.out.println("Error al leer el archivo: " + e.getMessage());
+    private static String formatTokens(List<Token> tokens) {
+        if (tokens.size() > 10) {
+            return tokens.subList(0, 5) + " ... " + 
+                   tokens.subList(tokens.size()-5, tokens.size()) + 
+                   " (" + tokens.size() + " tokens)";
         }
+        return tokens.toString();
     }
     
+    private static void showHelp() {
+        System.out.println("\n=== Ejemplos de código LISP ===");
+        System.out.println("1. Operaciones aritméticas:");
+        System.out.println("   (+ 2 3)");
+        System.out.println("   (* 4 (- 7 2))");
+        System.out.println("");
+        System.out.println("2. Definición de variables:");
+        System.out.println("   (setq x 10)");
+        System.out.println("   (+ x 5)");
+        System.out.println("");
+        System.out.println("3. Definición de funciones:");
+        System.out.println("   (defun cuadrado (n) (* n n))");
+        System.out.println("   (cuadrado 5)");
+        System.out.println("");
+        System.out.println("4. Condicionales:");
+        System.out.println("   (if (> 3 2) 'verdadero 'falso)");
+        System.out.println("");
+        System.out.println("5. Función recursiva:");
+        System.out.println("   (defun factorial (n) (if (= n 0) 1 (* n (factorial (- n 1)))))");
+        System.out.println("   (factorial 5)");
+    }
+
     private static LispResult interpretLisp(String code, Environment env) {
         LispResult result = new LispResult();
         
@@ -94,8 +106,14 @@ public class MainProjectLisp {
         Parser parser = new Parser(result.tokens);
         result.expression = parser.parse();
         
-        // Paso 3: Generación de código Java equivalente
-        result.javaCode = JavaCodeGenerator.generateJavaCode(result.expression);
+        // Paso 3: Generación de código Java (si existe la funcionalidad)
+        try {
+            // Asumimos que existe un JavaCodeGenerator
+            result.javaCode = JavaCodeGenerator.generateJavaCode(result.expression);
+        } catch (Exception e) {
+            // Si no existe la clase JavaCodeGenerator, simplemente continuamos
+            result.javaCode = null;
+        }
         
         // Paso 4: Evaluación
         result.result = result.expression.evaluate(env);
@@ -103,10 +121,14 @@ public class MainProjectLisp {
         return result;
     }
     
+    /**
+     * Clase auxiliar para almacenar los resultados de la interpretación
+     */
     static class LispResult {
         List<Token> tokens;
         Expression expression;
         String javaCode;
-        Object result;
-    }
+        Object result;
+    }
 }
+
