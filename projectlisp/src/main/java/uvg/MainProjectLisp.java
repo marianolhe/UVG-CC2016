@@ -3,6 +3,7 @@ package uvg;
 import java.util.List;
 import java.util.Scanner;
 
+
 /**
  * Intérprete LISP interactivo.
  * Permite al usuario ingresar expresiones LISP, analizarlas y obtener su resultado.
@@ -135,28 +136,20 @@ public class MainProjectLisp {
         result.expression = parser.parse();
         
         // Paso 3: Generación de código Java (si existe la funcionalidad)
-        try {
-            // Asumimos que existe un JavaCodeGenerator
-            result.javaCode = JavaCodeGenerator.generateJavaCode(result.expression);
-        } catch (Exception e) {
-            // Si no existe la clase JavaCodeGenerator, simplemente continuamos
+        if (result.expression != null) {  // <-- Verificación de nulo añadida
+            try {
+                result.javaCode = JavaCodeGenerator.generateJavaCode(result.expression);
+            } catch (Exception e) {
+                System.out.println("Aviso: No se pudo generar código Java: " + e.getMessage());
+                result.javaCode = null;
+            }
+        } else {
             result.javaCode = null;
         }
-        
         // Paso 4: Evaluación
-        result.result = result.expression.evaluate(env);
+        if (result.expression != null) {  // <-- Verificación de nulo añadida
+        result.result = result.expression.evaluate(env);}
         
         return result;
     }
-    
-    /**
-     * Clase auxiliar para almacenar los resultados de la interpretación
-     */
-    static class LispResult {
-        List<Token> tokens;
-        Expression expression;
-        String javaCode;
-        Object result;
-    }
 }
-
