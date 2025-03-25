@@ -4,93 +4,100 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Clase encargada de analizar una lista de tokens y construir una estructura de expresiones.
+ * Analizador sintáctico para expresiones LISP.
  */
 public class Parser {
     private List<Token> tokens;
     private int currentPosition;
 
     /**
-     * Constructor de la clase Parser.
-     * Inicializa el analizador con una lista de tokens.
-     * @param tokens Lista de tokens generada por el Tokenizer.
+     * Constructor que inicializa el parser con una lista de tokens.
      */
     public Parser(List<Token> tokens) {
         this.tokens = tokens;
-        this.currentPosition = 0; // Inicializa en la primera posición
+        this.currentPosition = 0;
     }
 
     /**
-     * Inicia el proceso de análisis sintáctico de los tokens.
-     * Se espera que los tokens formen una expresión válida.
-     * @return Una expresión representada como un objeto de tipo Expression.
-     * @throws RuntimeException si no hay tokens disponibles para analizar.
-     */      
+     * Analiza la lista de tokens y devuelve una expresión.
+     */
     public Expression parse() {
-        if (currentPosition >= tokens.size()) {
-            throw new RuntimeException("No hay tokens para analizar");
+        if (tokens.isEmpty()) {
+            return null;
         }
         return parseExpression();
     }
 
     /**
-     * Método privado que analiza una única expresión a partir de los tokens.
-     * Identifica si se trata de un número, un símbolo o una expresión en paréntesis.
-     * @return Una instancia de Expression que representa la expresión analizada.
-     * @throws RuntimeException si se encuentra un token inesperado o inválido.
-     */    
+     * Analiza una expresión, que puede ser un número, símbolo o lista.
+     */
     private Expression parseExpression() {
-        // Obtiene el token actual y avanza a la siguiente posición
-        Token token = tokens.get(currentPosition);
-        currentPosition++;
-        
-        // (), se analiza una expresión de lista
-        if (token.getType() == TokenType.PUNCTUATION && token.getValue().equals("(")) {
-            return parseListExpression();
-        } 
-        // número, se crea una expresión numérica
-        else if (token.getType() == TokenType.NUMBER) {
-            return new NumberExpression(Integer.parseInt(token.getValue()));
-        } 
-        // identificador, se crea una expresión de símbolo
-        else if (token.getType() == TokenType.IDENTIFIER || token.getType() == TokenType.KEYWORD || 
-                token.getType() == TokenType.OPERATOR) {
-            return new SymbolExpression(token.getValue());
+        if (currentPosition >= tokens.size()) {
+            return null;
         }
-        else {
-            throw new RuntimeException("Error: Token inesperado: " + token.getValue());
+
+        Token token = tokens.get(currentPosition);
+        
+        switch (token.getType()) {
+            case NUMBER:
+                currentPosition++; // Consumir el token
+                try {
+                    return new NumberExpression(Integer.parseInt(token.getValue()));
+                } catch (NumberFormatException e) {
+                    try {
+                        return new NumberExpression(Integer.parseInt(token.getValue()));
+                    } catch (NumberFormatException ex) {
+                        throw new RuntimeException("Número inválido: " + token.getValue());
+                    }
+                }
+                
+            case IDENTIFIER:
+            case KEYWORD:
+                currentPosition++; // Consumir el token
+                return new SymbolExpression(token.getValue());
+            case OPERATOR:  // 
+                currentPosition++; // Consumir el tokenn
+                return new SymbolExpression(token.getValue());
+                
+            case PUNCTUATION:
+                if (token.getValue().equals("(")) {
+                    currentPosition++; // Consumir el '('
+                    return parseListExpression();
+                } else if (token.getValue().equals(")")) {
+                    throw new RuntimeException("Paréntesis de cierre inesperado");
+                } else if (token.getValue().equals("'")) {
+                    currentPosition++; // Consumir la comilla
+                    Expression quoted = parseExpression();
+                    return new ListExpression(List.of(
+                        new SymbolExpression("quote"),
+                        quoted
+                    ));
+                } else {
+                    throw new RuntimeException("Símbolo de puntuación no reconocido: " + token.getValue());
+                }
+                
+            default:
+                throw new RuntimeException("Token inesperado: " + token);
         }
     }
     
     /**
-     * Método privado que analiza una expresión de lista, que comienza con '('.
-     * Se encarga de procesar múltiples expresiones dentro de los paréntesis.
-     * @return Una instancia de ListExpression que representa la lista de expresiones.
-     * @throws RuntimeException si no se encuentra el paréntesis de cierre ')'.
+     * Analiza una expresión de lista, que comienza con '('.
      */
     private Expression parseListExpression() {
         List<Expression> elements = new ArrayList<>();
         
-        // Leer expresiones hasta encontrar el paréntesis de cierre
         while (currentPosition < tokens.size()) {
             Token current = tokens.get(currentPosition);
             
-            // Ignorar espacios en blanco
-            if (current.getType() == TokenType.WHITESPACE) {
-                currentPosition++;
-                continue;
-            }
-            
-            // Si se encuentra un paréntesis de cierre, finalizar la lista
             if (current.getType() == TokenType.PUNCTUATION && current.getValue().equals(")")) {
-                currentPosition++; // Consumir el paréntesis
+                currentPosition++; // Consumir el ')'
                 return new ListExpression(elements);
             }
             
-            // Analizar la siguiente expresión y añadirla a la lista
             elements.add(parseExpression());
         }
         
-        throw new RuntimeException("Error: Se esperaba un paréntesis de cierre ')'");
+        throw new RuntimeException("Se esperaba un paréntesis de cierre ')'");
     }
 }

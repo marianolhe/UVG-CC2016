@@ -111,6 +111,7 @@ public class ListExpression extends Expression {
         String funcName = ((SymbolExpression) elements.get(1)).getName();
         
         if (!(elements.get(2) instanceof ListExpression)) {
+            
             throw new RuntimeException("La lista de parámetros debe ser una lista");
         }
         

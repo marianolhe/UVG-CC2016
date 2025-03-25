@@ -69,11 +69,16 @@ public class Tokenizer {
         if (currentPosition >= input.length()) {
             return null;
         }
+        // Manejo especial directo para paréntesis y comillas
+        char c = input.charAt(currentPosition);
+        if (c == '(' || c == ')' || c == '\'') {
+            currentPosition++;
+            return new Token(TokenType.PUNCTUATION, String.valueOf(c));}
 
         String[] tokenPatterns = {
             "defun|if|cond|setq|quote",  // Palabras clave de LISP
-            "[+-/*=<>!]",                // Operadores
-            "[()]",                      // Puntuación
+            "[+\\-\\/\\*\\=\\<\\>\\!]",                // Operadores
+            "[()']",                      // Puntuación
             "\\d+",                      // Números
             "\\s+",                      // Espacios en blanco
             "[a-zA-Z_][a-zA-Z0-9_]*"     // Identificadores

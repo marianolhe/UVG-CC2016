@@ -3,7 +3,6 @@ package uvg;
 import java.util.List;
 import java.util.Scanner;
 
-
 /**
  * Intérprete LISP interactivo.
  * Permite al usuario ingresar expresiones LISP, analizarlas y obtener su resultado.
