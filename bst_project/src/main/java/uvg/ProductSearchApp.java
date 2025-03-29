@@ -5,9 +5,9 @@ import java.util.*;
 public class ProductSearchApp {
     public static void main(String[] args) {
         BinarySearchTree<Product> bst = new BinarySearchTree<>();
-        String filePath = "products.csv";
+        String filePath = "HAS.csv";
         
-        try (BufferedReader br = new BufferedReader(new FileReader(HAS.csv))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             br.readLine(); // Omitir encabezado
             while ((line = br.readLine()) != null) {
