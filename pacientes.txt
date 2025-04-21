@@ -1,0 +1,10 @@
+Juan Pérez, Fiebre alta, C
+Ana Gómez, Fractura expuesta, A
+Luis Méndez, Dolor abdominal, B
+María López, Tos persistente, E
+Carlos Ruiz, Dolor en el pecho, A
+Laura Torres, Sangrado nasal, D
+Pedro Sánchez, Dolor de cabeza, E
+Sofía Morales, Quemadura leve, B
+Diego Castillo, Mareos, C
+Gabriela Díaz, Vómitos, D
