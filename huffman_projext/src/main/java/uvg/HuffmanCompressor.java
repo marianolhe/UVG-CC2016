@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * Clase que implementa la compresión y descompresión de Huffman.
  */
-class HuffmanCompressor {
+public class HuffmanCompressor {
 
     private Map<Character, String> huffmanCodes = new HashMap<>(); // Map para almacenar los códigos de Huffman
 
@@ -55,7 +55,7 @@ class HuffmanCompressor {
     }
 
     // Método para construir el mapa de frecuencias de los caracteres
-    private Map<Character, Integer> buildFrequencyMap(String text) {
+    Map<Character, Integer> buildFrequencyMap(String text) {
         Map<Character, Integer> map = new HashMap<>();
         for (char c : text.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
