@@ -3,5 +3,6 @@
     "files.watcherExclude": {
         "**/target": true
     },
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "git.ignoreLimitWarning": true
 }
