@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class HuffmanTest {
 
     private final HuffmanCompressor compressor = new HuffmanCompressor();
-s
+
     @Test
     void testBuildFrequencyMap() {
         String text = "aabbbbcc";

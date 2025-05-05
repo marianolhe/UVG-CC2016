@@ -10,8 +10,8 @@ public class MainHuffman {
         try {
             if (args.length < 2) {
                 System.out.println("Modo de uso:");
-                System.out.println("Para comprimir: java Main compress archivo.txt archivo.huff arbol.hufftree");
-                System.out.println("Para descomprimir: java Main decompress archivo.huff arbol.hufftree archivo_recuperado.txt");
+                System.out.println("Para comprimir: java MainHuffman compress archivo.txt archivo.huff arbol.hufftree");
+                System.out.println("Para descomprimir: java MainHuffman decompress archivo.huff arbol.hufftree archivo_recuperado.txt");
                 return;
             }
 
