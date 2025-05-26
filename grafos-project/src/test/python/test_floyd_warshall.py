@@ -1,6 +1,17 @@
+import sys
+import os
+
+test_dir = os.path.dirname(__file__)
+src_dir = os.path.join(test_dir, '..', '..')
+main_python_dir = os.path.join(src_dir, 'main', 'python')
+abs_path = os.path.abspath(main_python_dir)
+sys.path.insert(0, abs_path)
+
 import unittest
 from Grafo import Grafo
 from FloydMarshall import FloydWarshall
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'main', 'python'))
 
 class TestFloydWarshall(unittest.TestCase):
     
