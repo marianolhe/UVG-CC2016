@@ -1,3 +1,8 @@
+import os
+from typing import List
+from Grafo import Grafo
+from FloydMarshall import FloydWarshall
+
 class SistemaLogistica:
     """
     Sistema principal para gestión de rutas logísticas
@@ -56,9 +61,9 @@ Solola Quetzaltenango 3 4 6 9
 Guatemala Chimaltenango 2 3 4 7
 Antigua Escuintla 3 4 6 10"""
         
-        with open('guategrafo.txt', 'w', encoding='utf-8') as archivo:
+        with open('logistica.txt', 'w', encoding='utf-8')  as archivo:
             archivo.write(contenido)
-        print("Archivo guategrafo.txt de ejemplo creado.")
+        print("Archivo logistica.txt de ejemplo creado.")
     
     def actualizar_floyd(self):
         """Actualiza el algoritmo de Floyd-Warshall"""
@@ -102,10 +107,11 @@ Antigua Escuintla 3 4 6 10"""
             print("Error: Debe cargar el grafo primero")
             return
         
-        centro = self.floyd.calcular_centro_grafo()
+        centro, excentricidad = self.floyd.obtener_centro_grafo()  # CORREGIDO
         print(f"\nCentro del grafo: {centro}")
+        print(f"Excentricidad: {excentricidad:.1f}")
     
-    def agregar_conexion(self, ciudad1: str, ciudad2: str, tiempos: List[float]):
+    def agregar_conexion(self, ciudad1: str, ciudad2: str, tiempos: list):
         """Agrega una nueva conexión entre ciudades"""
         clave = (ciudad1, ciudad2)
         self.datos_originales[clave] = tiempos
@@ -237,13 +243,13 @@ def main():
     print("-" * 40)
     
     # Intentar cargar archivo o crear uno de ejemplo
-    if os.path.exists('guategrafo.txt'):
-        print("Cargando guategrafo.txt...")
-        sistema.cargar_archivo('guategrafo.txt')
+    if os.path.exists('logistica.txt'):
+        print("Cargando logistica.txt...")
+        sistema.cargar_archivo('logistica.txt')
     else:
-        print("No se encontró guategrafo.txt. Creando archivo de ejemplo...")
+        print("No se encontró logistica.txt. Creando archivo de ejemplo...")
         sistema.crear_archivo_ejemplo()
-        sistema.cargar_archivo('guategrafo.txt')
+        sistema.cargar_archivo('logistica.txt')
     
     # Iniciar menú principal
     sistema.menu_principal()
