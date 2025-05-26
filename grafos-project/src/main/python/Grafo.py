@@ -1,7 +1,4 @@
-import sys
-import os
 from typing import Dict, List, Tuple, Optional
-import copy
 
 class Grafo:
     """
@@ -56,6 +53,18 @@ class Grafo:
             return self.matriz_adyacencia[i][j]
         return self.INF
     
+    def existe_vertice(self, nombre: str) -> bool:
+        """Verifica si existe un vértice con el nombre dado"""
+        return nombre in self.vertices
+    
+    def existe_arco(self, origen: str, destino: str) -> bool:
+        """Verifica si existe un arco entre dos vértices"""
+        if origen in self.vertices and destino in self.vertices:
+            i = self.vertices[origen]
+            j = self.vertices[destino]
+            return self.matriz_adyacencia[i][j] != self.INF
+        return False
+    
     def mostrar_matriz(self):
         """Muestra la matriz de adyacencia"""
         print("\nMatriz de Adyacencia:")
@@ -76,3 +85,20 @@ class Grafo:
     def obtener_vertices(self) -> List[str]:
         """Retorna la lista de nombres de vértices"""
         return list(self.vertices.keys())
+    
+    def obtener_adyacentes(self, vertice: str) -> List[Tuple[str, float]]:
+        """Retorna los vértices adyacentes de un vértice dado con sus pesos"""
+        adyacentes = []
+        if vertice in self.vertices:
+            i = self.vertices[vertice]
+            for j in range(self.num_vertices):
+                if self.matriz_adyacencia[i][j] != self.INF:
+                    adyacentes.append((self.indices[j], self.matriz_adyacencia[i][j]))
+        return adyacentes
+    
+    def limpiar(self):
+        """Limpia completamente el grafo"""
+        self.vertices.clear()
+        self.indices.clear()
+        self.matriz_adyacencia.clear()
+        self.num_vertices = 0
