@@ -1,0 +1,5 @@
+Guatemala,Antigua,45
+Guatemala,Escuintla,60
+Guatemala,Chimaltenango,55
+Antigua,Chimaltenango,25
+Escuintla,Mazatenango,75
